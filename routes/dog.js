@@ -41,11 +41,29 @@ router.get('/allDogs', async (req, res) => {
 router.patch("/:id", async(req, res) => {
     try {
         await Dog.updateOne({ _id: req.params.id }, {
-            $set: { name: req.body.name, price: req.body.price }
+            $set: { productid: req.body.productid,
+                category: req.body.category,
+                label: req.body.label,
+                name: req.body.name,
+                price: req.body.price,
+                weight: req.body.weight,
+                description: req.body.description,
+                benefit: req.body.benefit,
+                instruction: req.body.instruction }
         })
         res.json({ message: "Success" })
     } catch (err) {
         res.json({ "Error": err.message })
+    }
+})
+
+//delete products 
+router.delete("/:id", async(req, res) => {
+    try {
+        await Dog.remove({ _id: req.params.id });
+        res.json({ message: "Success" })
+    } catch (err) {
+        res.json({ "Error": err.message });
     }
 })
 module.exports = router
