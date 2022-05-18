@@ -17,16 +17,20 @@ const dogSchema = new mongoose.Schema({
         type: String,
         // required: true
     },
-    price: {
-        type: [Number],
-        // required: true
-    },
     image: {
         type: [String],
         // required: true
     },
     weight: {
         type: [String],
+        // required: true
+    },
+    color: {
+        type: [String],
+        // required: true
+    },
+    price: {
+        type: [Number],
         // required: true
     },
     description: {
@@ -40,7 +44,9 @@ const dogSchema = new mongoose.Schema({
     instruction: {
         type: String,
         // required: true
-    }
+    },
+    createdAt: {type:Date, default:Date.now},
+    updatedAt: {type:Date, default:Date.now}
 })
 
 module.exports = mongoose.model('dog', dogSchema)
