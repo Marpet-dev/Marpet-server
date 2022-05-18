@@ -1,5 +1,5 @@
 {
-    "name": "marpet_server",
+    "name": "marpet-server",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Marpet-dev/Marpet_server.git"
+        "url": "git+https://github.com/Marpet-dev/Marpet-server.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Marpet-dev/Marpet_server/issues"
+        "url": "https://github.com/Marpet-dev/Marpet-server/issues"
     },
-    "homepage": "https://github.com/Marpet-dev/Marpet_server#readme",
+    "homepage": "https://github.com/Marpet-dev/Marpet-server#readme",
     "dependencies": {
         "body-parser": "^1.20.0",
         "cors": "^2.8.5",
